@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DuAn1_Nhom4_CP17310</string>
+    <string name="facebook_app_id">3443330282553661</string>
+    <string name="facebook_client_token">d52da1f43e195f5c3d1ce54c9e0752d7</string>
+
+    <string name="trangchu">Trang Chủ</string>
+    <string name="datve">Đặt vé</string>
+    <string name="tintuc">Tin Tức</string>
+    <string name="quanly">Quản Lý</string>
+    <string name="khac">Khác</string>
+
+</resources>

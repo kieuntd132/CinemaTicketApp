@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_edt"
+    android:padding="10dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:orientation="vertical"
+    tools:context=".views.BookedTicketActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="130dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="-35dp"
+        android:src="@drawable/logocgv" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/iv_logo"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Rạp Chiếu Phim \n CGV Vincom Gò Vấp\n ..............................."
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:textStyle="" />
+
+    <TextView
+        android:id="@+id/tv_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_address"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Vé xem phim(TICKETS)"/>
+
+    <TextView
+        android:id="@+id/tv_tenphim"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_below="@id/tv_tickets"
+        android:textStyle="bold"
+        android:text="tên phim"/>
+
+    <TextView
+        android:id="@+id/tv_gio"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tv_tenphim"
+        android:layout_height="wrap_content"
+        android:text="Giờ:"
+        android:textSize="22dp"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tv_gio"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:id="@+id/tv_suatxem"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/tv_gio"
+        android:layout_height="wrap_content"
+        android:text="21:30"
+        android:textStyle="bold"
+        android:layout_marginTop="155dp"
+        android:textSize="35dp"/>
+
+    <TextView
+        android:id="@+id/tv_ghe"
+        android:layout_toRightOf="@id/tv_suatxem"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tv_tenphim"
+        android:layout_height="wrap_content"
+        android:text="Ghế:"
+        android:textSize="22dp"/>
+
+    <TextView
+        android:id="@+id/tv_seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_gio"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/tv_suatxem"
+        android:text="Seat"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/tv_maghe"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/tv_ghe"
+        android:layout_height="wrap_content"
+        android:text="B2"
+        android:textStyle="bold"
+        android:layout_marginTop="155dp"
+        android:textSize="35dp"/>
+
+    <TextView
+        android:id="@+id/tv_ngay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày: "
+        android:textSize="22dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv_time"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ngay"
+        android:text="Date "
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tv_ngayxemphim"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/tv_gio"
+        android:layout_height="wrap_content"
+        android:text="24/08/2022"
+        android:textStyle="bold"
+        android:layout_marginTop="230dp"
+        android:textSize="26dp"/>
+
+    <TextView
+        android:id="@+id/tv_gia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá vé:"
+        android:layout_marginLeft="20dp"
+        android:textSize="18dp"
+        android:layout_toRightOf="@+id/tv_ngayxemphim"
+        android:layout_marginTop="230dp"/>
+
+    <TextView
+        android:id="@+id/tv_giave"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tv_gia"
+        android:layout_toRightOf="@+id/tv_ngayxemphim"
+        android:layout_marginLeft="20dp"
+        android:textSize="27dp"
+        android:layout_height="wrap_content"
+        android:text="75,000"/>
+
+    <TextView
+        android:id="@+id/tv_tentaikhoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Quang Trường"
+        android:layout_below="@id/tv_date"
+        android:layout_marginTop="15dp"/>
+
+
+</RelativeLayout>

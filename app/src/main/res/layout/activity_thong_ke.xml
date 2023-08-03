@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        tools:context=".views.ThongKeActivity"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/btn_xemDoanhThu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Biểu đồ doanh thu"/>
+
+        <Button
+            android:id="@+id/btn_doanhThuTheoNgay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Doanh thu theo ngày"
+            android:layout_alignParentRight="true"
+            />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/barchart"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@+id/btn_xemDoanhThu"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title"
+            android:text="Danh sách doanh thu"
+            android:layout_below="@+id/barchart"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_thongke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#161616"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_tintuc"
+        android:layout_width="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#F3EFEF"
+        android:background="@drawable/background_button_tintuc"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        android:layout_marginRight="20dp"
+        android:textSize="13dp"
+        android:layout_height="40dp"
+        android:text="Điện Ảnh"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_maps"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_button_tintuc"
+        android:textStyle="italic"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="13dp"
+        android:text="Bản đồ"
+        android:textColor="#F3EFEF"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/fr_tintuc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+</RelativeLayout>

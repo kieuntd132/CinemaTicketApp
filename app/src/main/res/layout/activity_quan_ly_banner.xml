@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="match_parent"
+    tools:context=".views.QuanLyBannerActivity">
+
+    <ImageView
+        android:id="@+id/iv_trangchu_banner"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/trangchu"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_trangchu_banner"
+        android:padding="6dp" />
+
+    <ImageButton
+        android:id="@+id/btn_insert_banner"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/iv_trangchu_banner"
+        android:background="@android:color/transparent"
+        android:src="@drawable/add_svgrepo_com" />
+
+</RelativeLayout>

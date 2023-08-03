@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/trangchu"
+        android:icon="@drawable/trangchu"
+        android:title="Trang chủ"/>
+    <item android:id="@+id/datve"
+        android:icon="@drawable/ticket"
+        android:title="Đặt vé"/>
+    <item android:id="@+id/tintuc"
+        android:icon="@drawable/tintuc"
+        android:title="Tin tức"/>
+    <item android:id="@+id/khac"
+        android:icon="@drawable/khac"
+        android:title="Khác"/>
+</menu>

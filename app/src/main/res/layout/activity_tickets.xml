@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#161616"
+        tools:context=".views.TicketsActivity">
+
+        <LinearLayout
+            android:id="@+id/ln"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/imv_ticket"
+                android:layout_width="150dp"
+                android:layout_marginTop="30dp"
+                android:background="#202020"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:id="@+id/tv_tenphim_ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên Phim"
+                android:layout_marginTop="10dp"
+                android:textSize="27sp"
+                android:textColor="#fff"
+                android:shadowRadius="10"
+                android:shadowDy="5"
+                android:shadowDx="5"
+                android:shadowColor="#ccc"
+                android:textStyle="italic"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_chonngay_xem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ln"
+            android:layout_marginLeft="20dp">
+
+            <Button
+                android:id="@+id/btn_chonngay_xem"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#1AFFFFFF"
+                android:textColor="#fff"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:text="Chọn ngày xem"/>
+
+            <TextView
+                android:id="@+id/tv_chonngay_xem"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textStyle="italic|bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_chon_suat_xem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ln_chonngay_xem">
+
+            <TextView
+                android:id="@+id/tv_chon_suat_xem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chọn suất xem"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_chon_suat_xem"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_chon_soluong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/ln_chon_suat_xem"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_soluong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số lượng vé"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_soghe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/ln_chon_soluong"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chọn ghế"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_soghe"
+                android:layout_margin="10dp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_below="@id/ln_soghe"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btn_ticket"
+                android:layout_width="120dp"
+                android:background="@drawable/background_button_tintuc"
+                android:text="Đặt vé"
+                android:textColor="#fff"
+                android:shadowColor="#ccc"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="10"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn_cancel_ticket"
+                android:layout_width="120dp"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/background_button_tintuc"
+                android:text="Hủy vé"
+                android:textColor="#fff"
+                android:shadowColor="#ccc"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="10"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="6dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp"
+        android:background="#393939">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_imv_film"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="10dp">
+            <ImageView
+                android:id="@+id/imv_film_manager"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+
+                android:src="@drawable/p2_blackadam" />
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/btn_datve"
+            android:layout_width="100dp"
+            android:layout_below="@+id/cv_imv_film"
+            android:layout_height="30dp"
+            android:text="Đặt vé"
+            android:shadowRadius="10"
+            android:shadowColor="#fff"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:background="@drawable/background_button"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

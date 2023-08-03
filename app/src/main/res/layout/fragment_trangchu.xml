@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="70dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_sl_Top"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentTop="true"
+            />
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/circleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center"
+            app:ci_drawable="@drawable/indicator_custom"
+            android:layout_below="@+id/vp_sl_Top"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_title_top_film"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gợi ý cho bạn"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:shadowRadius="10"
+            android:shadowDy="5"
+            android:shadowDx="5"
+            android:shadowColor="#fff"
+            android:layout_marginLeft="15dp"
+            android:textColor="#fff"
+            android:layout_below="@+id/circleIndicator"/>
+
+
+        <LinearLayout
+            android:id="@+id/lv_goiy"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_below="@+id/tv_title_top_film"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:background="@drawable/blog_blackadam__large">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_goiy"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="15dp"
+                android:paddingStart="-350dp"
+
+                android:paddingEnd="-350dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_tenphim_goiy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="HARRY POTTER VÀ HOÀNG TỬ LAI"
+                        android:textAllCaps="true"
+                        android:textColor="#FFEB3B"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_ngaychieu_goiy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Ngày chiếu:"
+                        android:textColor="#FFEB3B"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nunito_bold"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_datve_goiy"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_button"
+                    android:shadowColor="#fff"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="10"
+                    android:text="Đặt vé"
+                    android:textAllCaps="false"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_all_film"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đang chiếu"
+            android:textSize="20dp"
+            android:layout_marginTop="25dp"
+            android:shadowRadius="10"
+            android:shadowDy="5"
+            android:shadowDx="5"
+            android:shadowColor="#fff"
+            android:layout_marginLeft="15dp"
+            android:textColor="#fff"
+            android:layout_below="@+id/lv_goiy"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_all_film"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_all_film" />
+
+        <Button
+            android:id="@+id/btn_xem_all_film"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:textColor="#fff"
+            android:layout_marginBottom="10dp"
+            android:text="Xem thêm    > > > > >"
+            android:layout_below="@id/rv_all_film"
+            android:background="@drawable/background_button_xemthem"/>
+
+        <TextView
+            android:id="@+id/tv_tintuc_dienanh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tin tức điện ảnh"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:shadowRadius="10"
+            android:shadowDy="5"
+            android:shadowDx="5"
+            android:shadowColor="#fff"
+            android:layout_marginLeft="15dp"
+            android:textColor="#fff"
+            android:layout_below="@+id/btn_xem_all_film"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tintuc_trangchu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tintuc_dienanh"/>
+
+    </RelativeLayout>
+
+</ScrollView>

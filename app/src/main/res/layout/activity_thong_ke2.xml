@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.ThongKe2Activity">
+
+    <TextView
+        android:id="@+id/tv_title_tk2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Doanh thu phim theo ngày"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@color/teal_200"/>
+
+    <TextView
+        android:id="@+id/tv_chonphim_tk2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn phim xem doanh thu:"
+        android:layout_below="@+id/tv_title_tk2"
+        android:textSize="14sp"
+        android:padding="5dp"/>
+
+    <Spinner
+        android:id="@+id/spn_tk2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_chonphim_tk2"/>
+
+    <Button
+        android:id="@+id/btn_chonngay_tk2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spn_tk2"
+        android:text="Chọn ngày"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_ngay_tk2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btn_chonngay_tk2"
+        android:text=""
+        android:layout_below="@+id/spn_tk2"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/xem_doanhthu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_chonngay_tk2"
+        android:layout_centerHorizontal="true"
+        android:text="Xem doanh thu"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_showdoanhthu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/xem_doanhthu"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#393939"
+        android:padding="10dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_item_banner_manager"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imv_banner"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/cn1"
+          />
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:id="@+id/tv_banner"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phim Adam"
+            android:layout_below="@+id/cv_item_banner_manager"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textColor="#fff"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_all"
+    tools:context=".views.UpdateFilmActivity"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/tv_them"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Sửa Phim"
+        android:textColor="#fff"
+        android:textStyle="italic"
+        android:textSize="50dp"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="#fff"
+        android:shadowDx="10"
+        android:shadowDy="5"
+        android:shadowRadius="10"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_image_update_film"
+        android:layout_width="150dp"
+        android:layout_below="@id/tv_them"
+        android:layout_marginTop="30dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/avengers" />
+
+    <ImageView
+        android:id="@+id/imv_choose_update"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/iv_image_update_film"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/storage"/>
+
+    <TextView
+        android:id="@+id/tv_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Storage"
+        android:layout_below="@+id/imv_choose_update"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"/>
+
+    <LinearLayout
+        android:layout_below="@+id/tv_storage"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:textColorHint="#fff"
+            app:startIconTint="#fff"
+            app:startIconDrawable="@drawable/movie_camera_svgrepo_com">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ip_suaTenPhim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập Tên Phim"
+                android:inputType="text"
+                android:textColor="#fff"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:textColorHint="#fff"
+            app:startIconTint="#fff"
+            app:startIconDrawable="@drawable/date_and_time_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ip_suaNgay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ngày Khởi Chiếu"
+                android:inputType="text"
+                android:textColor="#fff"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:textColorHint="#fff"
+            app:startIconTint="#fff"
+            app:startIconDrawable="@drawable/price">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ip_suaGiaVe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Giá Vé"
+                android:inputType="text"
+                android:textColor="#fff"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:textColorHint="#fff"
+            app:startIconTint="#fff"
+            app:startIconDrawable="@drawable/price">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ip_noiDungPhim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nội dung phim"
+                android:inputType="text"
+                android:textColor="#fff"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_update_film"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:background="@drawable/background_button_tintuc"
+                android:layout_height="wrap_content"
+                android:text="Sửa"/>
+
+            <Button
+                android:id="@+id/btn_cancel_update_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:background="@drawable/background_button_tintuc"
+                android:layout_marginLeft="150dp"
+                android:text="Hủy"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>
